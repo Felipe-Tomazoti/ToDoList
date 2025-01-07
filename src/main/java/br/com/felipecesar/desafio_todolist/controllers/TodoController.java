@@ -1,9 +1,9 @@
-package br.com.felipecesar.desafio_todolist.controller;
+package br.com.felipecesar.desafio_todolist.controllers;
 
-import br.com.felipecesar.desafio_todolist.domain.Todo;
-import br.com.felipecesar.desafio_todolist.service.TodoService;
+import br.com.felipecesar.desafio_todolist.domains.Todo;
+import br.com.felipecesar.desafio_todolist.services.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class TodoController {
     private TodoService todoService;
 
     @PostMapping
-    public List<Todo> create(@RequestBody Todo todo){
+    public List<Todo> create(@RequestBody @Valid Todo todo){
         return todoService.create(todo);
     }
 

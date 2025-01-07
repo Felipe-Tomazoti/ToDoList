@@ -1,14 +1,12 @@
-package br.com.felipecesar.desafio_todolist.service;
+package br.com.felipecesar.desafio_todolist.services;
 
-import br.com.felipecesar.desafio_todolist.domain.Todo;
-import br.com.felipecesar.desafio_todolist.resource.TodoRepository;
-import org.apache.coyote.BadRequestException;
+import br.com.felipecesar.desafio_todolist.domains.Todo;
+import br.com.felipecesar.desafio_todolist.resources.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TodoService {
